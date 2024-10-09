@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Admins" %>
+
+<h1>Admins</h1>
+
+<div id="admins">
+  <% @users.each do |user| %>
+    <div>
+      <%= render 'users/user', user: user %>
+      <p>
+        <%= link_to "Show this user", user %>
+      </p>
+      <%= button_to "Remove from admin", user_admins_path(user), { method: :delete } %>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<div>
+  <%= link_to "New admin", new_users_admin_path %>
+</div>

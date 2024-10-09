@@ -3,9 +3,14 @@
 one:
   email: MyString
   name: MyString
-  admin: false
+  admin: true
 
 two:
+  email: MyString
+  name: MyString
+  admin: false
+
+three:
   email: MyString
   name: MyString
   admin: false
